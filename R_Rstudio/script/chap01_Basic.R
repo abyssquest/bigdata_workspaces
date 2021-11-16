@@ -1,7 +1,7 @@
-#chap01_Basic.R : 주석문
+# chap01_Basic.R : 주석문
 
 # R 패키지 보기
-dim(available.packages())   #18380  17
+dim(available.packages())	#18393	17
 
 # R 패키지 목록 보기
 available.packages()
@@ -39,7 +39,7 @@ lines(density(Nile))
 
 # 히스토그램을 파일로 저장하기
 par(mfrow = c(1,1))
-pdf("C:/workspaces/batch.pdf") # pdf 출력
+pdf("C:/DevSource/bigdata_workspaces/R_Rstudio/output/batch.pdf") # pdf 출력
 hist(rnorm(20)) # 난수에 대한 히스토그램 그리기
 dev.off() # 출력할 파일 닫기
 
@@ -152,4 +152,4 @@ example(sum)
 
 # 작업 공간 지정
 getwd()
-setwd("T:/Beta_Git_Src/class_bigdata_src/R_script_Rstudio/")
+setwd("C:/DevSource/bigdata_workspaces/R_Rstudio")
