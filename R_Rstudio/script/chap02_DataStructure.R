@@ -299,7 +299,7 @@ class(memp) # "data.frame"
 
 # txt 파일 이용 객체 생성
 getwd()
-setwd("T:/Beta_Git_Src/class_bigdata_src/R_work/data")
+setwd("C:/DevSource/bigdata_workspaces/R_Rstudio/data")
 
 txtemp <- read.table('emp.txt', header = T, sep = "")
 txtemp
@@ -477,4 +477,3 @@ string_vec
 
 string_join <- paste(string_vec, collapse = ',')
 string_join
-
