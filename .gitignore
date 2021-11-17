@@ -1,3 +1,6 @@
+#custom_KMG
+target/
+Servers/
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,eclipse,r,java,web,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,eclipse,r,java,web,python
