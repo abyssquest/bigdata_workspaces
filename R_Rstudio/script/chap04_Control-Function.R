@@ -256,8 +256,9 @@ add
 # 기술 통계량을 계산하는 함수 정의 
 # 파일 불러오기
 getwd()
-setwd("C:/workspaces/Rwork/data")
+setwd("C:/DevSource/bigdata_workspaces/R_Rstudio/data")
 
+# read.~() 은 테이블로 반환, 테이블은 데이터 프레임, 데이터 프레임은 matrix
 test <- read.csv("test.csv", header = T)
 head(test)
 
@@ -267,7 +268,7 @@ table(test$A) # A 변수 대상 빈도 수.
 max(test$A)   # 최대값
 min(test$A)   # 최소값
 
-length(test)  # 5
+length(test)  # 5 : column의 개수
 
 # 각 컬럼 단위 요약통계량과 빈도 수 구하기.
 data_pro <- function(x){
