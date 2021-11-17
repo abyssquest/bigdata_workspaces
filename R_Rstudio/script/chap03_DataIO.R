@@ -150,6 +150,7 @@ head(html_cont)
 names(html_cont) <- c("State", "y2010", "y2011", "y2012", "y2013", "y2014", "y2015")
 tail(html_cont)
 
+
 # 2. 데이터 저장하기
 # 2-1. 화면(콘솔) 출력
 #  1) cat() 함수
@@ -168,7 +169,7 @@ print("x * y = ", z) # error
 # 2-2. 파일에 데이터 저장
 #  1) sink() 함수를 이용한 파일 저장
 getwd()
-setwd("C:/workspaces/Rwork/output")
+setwd("C:/DevSource/bigdata_workspaces/R_Rstudio/output")
 
 library(RSADBE)
 data("Severity_Counts") # Severity_Counts 데이터 셋 가져오기
@@ -217,11 +218,3 @@ write.xlsx(st.df, "studenttx.xlsx") # excel 형식으로 저장.
 #     - data.frame 형식의 데이터를 csv 형식으로 저장.
 
 write.csv(st.df, "stdf.csv", row.names = F, quote = F)
-
-
-
-
-
-
-
-
