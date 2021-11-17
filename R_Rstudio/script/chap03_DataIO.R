@@ -62,7 +62,7 @@ student4
 # 패키지 설치와 java 실행 환경 설정
 install.packages("rJava") # rJava 패키지 설치
 install.packages("xlsx")  # xlsx 패키지 설치
-Sys.setenv(JAVA_HOME='C:/Program Files/Java/jre1.8.0_271')
+Sys.setenv(JAVA_HOME='C:/Program Files/Java/jre1.8.0_311')
 
 # 관련 패키지 메모리 로드
 library(rJava)
@@ -113,9 +113,10 @@ barplot(GDP_ranking16$GDP, col = rainbow(16),
 num_gdp2 <- num_gdp / 1000
 GDP_ranking16$GDP2 <- num_gdp2
 barplot(GDP_ranking16$GDP2, col = rainbow(16),
-        main = "2019년도 GDP 세계 16위 국가",
+        main = "2020년도 GDP 세계 16위 국가",
         xlab = '국가(nation)', ylab='단위(천달러)', names.arg=nation)
 
+GDP_ranking16
 
     ## 1-4. 웹문서 가져오기
 
