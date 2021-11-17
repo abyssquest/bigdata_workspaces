@@ -1,0 +1,129 @@
+Hello Java World
+Comments
+Println();
+
+Data - Variable, Naming
+	변수 Variable
+	상수 Constant
+	범위 Scope : 전역변수 global Var, 지역변수 local Var
+
+Data - Primary Type : 데이터 1개만 저장
+	논리	boolean
+		단축평가값 Short circuit Evolution
+	문자	char	(+ String)
+	숫자
+		정수	byte, short, int, long
+		실수	float, double
+	형변환 Var Casting
+	
+
+
+연산 Operation
+	산술연산
+	복합연산
+	비교연산
+	논리연산
+	전위후위연산
+	비트연산
+	비트이동연산
+	2의보수법
+	삼항조건연산
+
+제어문	control statement
+	조건문
+		if (bool) {act}
+		if (bool) {act} else {}
+		if (bool) {act} if else () {} else {}
+		if문 {} 생략
+		switch (var) { case var:cond break; default: break; }
+	반복문
+		While (bool) {act}
+		Do {act} While (bool)
+		for (var 할당 및 초기값; var 범위조건; var 변화조건) {act}
+	기타 제어문
+		break		- 제어문 멈추고 나가기
+		continue	- 제어문 맨 앞으로 이동해 반복
+
+Method (parameter) {act}
+	method 설정 - 1. 기본형 2. parameter 존재하는 유형
+	return 역할1 return type 존재할때
+	return 역할2 return type void
+
+==== ==== ==== ==== ====
+Data - Reference Type : 데이터 여러개 저장 가능
+	참조 자료형에 대한 메모리 할당 요청 - new
+	문자열	String
+	배  열	Array
+	클래스	Class
+	
+class ClassType { field constructor method }
+	class 설정 + class 선언
+	field(속성) 설정 : 인스턴스 변수 선언
+	conductor(생성자) 설정 : classType (conductor parameter) { 인스턴스 변수 = conductor parameter; }
+	method 설정
+	인스턴스 변수 this의 역할1
+
+접근제어지시자 Access Control Indicator
+	public
+	protected
+	default - 같은 폴더안 참조변수 통해서 접근 허용
+	private - 같은 클래스까지 접근 허용 / class field는 기본적으로 private 시키자
+
+	class, conductor - (default), public
+	field, method - private, (default), protected, public
+	
+오버로딩 Overloading
+	메소드 오버로딩 : 이름이 같아도 괜찮은 조건 - '행동'이 일어나기전에 구분 가능 : 매개변수의 개수, 종류가 다를 때
+	생성자 오버로딩 : 이름이 같아도 괜찮은 조건 - '행동'이 일어나기전에 구분 가능 : 매개변수의 개수, 종류가 다를 때
+	인스턴스 변수 this의 역할2
+	
+static 변수 = 클래스 변수
+	   static method 내에서 실행되는 method와 이용되는 variable은 static 이어야 한다
+	nonstatic method 내에서 실행되는 method와 이용되는 variable은 static 일 필요가 없다
+	
+	
+
+	main Method 내에서
+		class 선언1
+			ClassType 참조변수;
+			참조변수 = new ClassType();
+		class 선언2
+			ClassType 참조변수 = new ClassType();
+			
+			
+			
+java의 메모리 관리
+	method 영역 - 프로그램이 종료될때까지 그 실행파일이나 or 데이터들 보존 보관을 하는 성질을 가진다
+		static 변수, static 메서드가 저장
+		main method 영역도 비슷한 특징을 지닌다
+	stack 영역 - 지역변수, 매개변수 저장 : 범위가 끝나면 삭제되는 데이터
+		참조변수
+	heap 영역 - 참조변수로 찾아가는 데이터
+		C언어 : 개발자가 heap 영역 할당된 메모리 직접 소멸 시켜줘야함 (-> 프로그램 다운 : 메모리 죽여줘....)
+		java : java가 적절한 시점에 자동 삭제. 개발자는 소멸 시점 모름 (java가 C언어에 비해 나아진점)
+		참조변수 초기화, 삭제되어 연결이 끊어지면 더이상 이용안한다는 신호이므로 그때 삭제
+		
+JAVA가 제공한 ClassType의 method
+- method chaining
+String
+	.concat() - 거의 안쓰는 이유
+	.compareTo()
+StringBuilder
+	.appent()
+	
+배열 Array : 같은 자료형을 묶어서 관리
+	1차원 배열
+		자료형[] 변수 = new 자료형[data개수]
+		자료형 변수[] = new 자료형[data개수]
+		자료형 변수[] = new 자료형[] {data1, data2, ...}
+		자료형 변수[] = {data1, data2, ...}
+	
+	2차원 배열
+		자료형[][] 변수 = new 자료형[data개수][data개수]
+		자료형 변수[][] = new 자료형[data개수][data개수]
+		자료형[] 변수[] = new 자료형[data개수][data개수]
+		new 자료형[] { {data1, data2, data3}, {data6, data7, data8}
+		
+===== ===== ===== ===== ===== ===== ===== ===== ===== =====
+상속
+	
