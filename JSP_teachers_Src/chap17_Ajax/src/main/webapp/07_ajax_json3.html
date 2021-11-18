@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>$.getJSON()으로 Flickr에서 너구리(raccoon) 이미지 얻기</title>
+
+<style type="text/css">
+	img {
+		height: 100px;
+		float:left;
+	}
+</style>
+
+<script src="./js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?" +
+				"tags=raccoon&tagmode=any&format=json&jsoncallback=?", 
+			function(data){
+				$.each(data.items, function(index, item){
+					$('<img />').attr("src", item.media.m).appendTo("#images");
+					if(index == 4){
+						return false;
+					}
+				});
+			}
+		);
+	});
+</script>
+
+</head>
+<body>
+
+	<div id="images"></div>
+
+</body>
+</html>
