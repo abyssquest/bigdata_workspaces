@@ -430,9 +430,3 @@ union(x, y) # 합집합
 setequal(x, y) # 동일성 체크
 intersect (x, y) # 집합x와y의교집합
 setdiff(x, y)# x의모든원소중y에는없는x와y의차집합
-
-
-
-
-
-
