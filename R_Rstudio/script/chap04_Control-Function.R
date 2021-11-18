@@ -380,7 +380,7 @@ range(vec)
 mean(vec)
 median(vec)
 sum(vec)
-sd(rnorm(10)) # 표준편차 구하기.
+sd(vec) # 표준편차 구하기.
 table(vec)    # 빈도수
 
 # 난수와 확률 분포 관계
