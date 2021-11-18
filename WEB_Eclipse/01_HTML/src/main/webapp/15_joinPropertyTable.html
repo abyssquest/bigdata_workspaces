@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>테이블 셀 합치기</title>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<td>1행1열</td>
+				<td>1행2열</td>
+			</tr>
+			<tr>
+				<td>2행1열</td>
+				<td>2행2열</td>
+			</tr>
+		</table>
+		
+		<hr>
+		
+		<h2>열 합치기</h2>
+		<table border="1">
+			<tr align = "center">
+				<td colspan="2">1행1열</td>
+				<!-- <td></td> -->
+			</tr>
+			<tr>
+				<td>2행1열</td>
+				<td>2행2열</td>
+			</tr>
+		</table>
+		
+		<hr>
+		
+		<h2>행 합치기</h2>
+		<table border="1">
+			<tr>
+				<td rowspan="2">1행1열</td>
+				<td>1행2열</td>
+			</tr>
+			<tr>
+				<!-- <td>2행1열</td> -->
+				<td>2행2열</td>
+			</tr>
+		</table>
+		
+		<hr>
+		
+		<h2>셀 합치기</h2>
+		<table border="1" width = "150" height = "150" cellspacing ="1">
+			<tr align = "center">
+				<td colspan="2">1</td>
+				<!-- <td>1로 흡수</td> -->
+				<td rowspan="3">3</td>
+			</tr>
+			<tr align = "center">
+				<td rowspan="2">4</td>
+				<td>5</td>
+				<!-- <td>3로 흡수</td> -->
+			</tr>
+			<tr align = "center">
+				<!-- <td>4로 흡수</td> -->
+				<td>8</td>
+				<!-- <td>3로 흡수</td> -->
+			</tr>
+		</table>
+	</body>
+</html>

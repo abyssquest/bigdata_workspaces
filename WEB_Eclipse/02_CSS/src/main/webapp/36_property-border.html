@@ -1,0 +1,43 @@
+﻿<!--
+	* 박스 속성
+		▶ border(테두리) 속성
+			- border-width 속성
+				. 테두리의 너비를 지정하는 스타일 속성.
+				. 크기단위:border-left[top/right/bottom]-width
+				. 키워드:medium/thick/thin...
+			- border-style 속성
+				. 테두리의 형태를 지정하는 스타일 속성.
+				. border-left[top/right/bottom]-style
+			- border-color 속성
+				. border-left[top/right/bottom]-color
+			- border-radius 속성
+				. CSS3에서 추가된 속성.
+				. 테두리가 둥근 사각형 또는 원을 만들 수 있다.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>박스속성-테두리(border)</title>
+		
+		<style type="text/css">
+			.box {
+				/* 
+				border-width: 50px;
+				border-color: olive;
+				border-style: groove;
+				 */
+				
+				border: 50px olive groove;
+				border-radius: 10px 20px 30px 40px;
+			}
+		
+		</style>
+	</head>
+	<body>
+	   <div class="box">
+	     <h1>Lorem ipsum dolor amet</h1>
+	   </div>
+	</body>
+</html>

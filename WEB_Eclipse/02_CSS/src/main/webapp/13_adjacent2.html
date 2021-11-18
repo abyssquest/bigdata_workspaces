@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>인접(adjacent) & 형제(sibling) 선택자</title>
+		
+		<style type="text/css">
+			h1 ~ h2 {
+				/* 형제 선택자 : h1 이후 형제관계의 h2 모두를 선택 */
+				color: blue;
+			}
+			
+			h1 + h2 {
+				/* 인접 선택자 : h1 바로 뒤의 h2만 선택 */
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Header - 1</h1>
+		<h2>Header - 2</h2>
+		<h2>Header - 2</h2>
+		<h2>Header - 2</h2>
+		<h3>Header - 3</h3>
+	</body>
+</html>

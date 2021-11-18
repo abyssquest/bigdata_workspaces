@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript 기본 문법</title>
+		
+		<script type="text/javascript">
+
+/* 1. 출력 
+	alert("Hello, JavaScript World1..."); // 세미콜론 붙이건 안붙이건 일관적으로 쓰도록
+	alert("Hello, JavaScript World2...") // 세미콜론 안붙여도 작동
+// */
+
+/* 2. 문자열 자료형
+	alert("Hello JavaScript_1!!!");
+	alert('Hello JavaScript_2!!!');
+	
+	//alert("Hello "JavaScript_3"!!!"); // error
+	//alert("Hello 'JavaScript_4'!!!'); // error
+	alert("Hello \"JavaScript_5\"!!!");
+	alert("Hello \'JavaScript_6\'!!!");
+	
+	// - 이스케이프 문자
+	// 		\" : 큰 따옴표 출력
+	// 		\' : 작은 따옴표 출력
+	// 		\t : 수평 탭
+	// 		\n : 줄바꿈
+	// 		\\ : 역슬래시
+	
+	alert('Hello "JavaScript_7"!!!'); // ok
+	alert("Hello 'JavaScript_8'!!!"); // ok
+// */
+	
+/* 3. 숫자 자료형 
+	alert(273);
+	alert(3.14);
+// */
+
+
+/* 4. 변수
+	var radius = 10; // 정수
+	alert(radius);
+	
+	var pi = 3.14; // 실수
+	alert(pi);
+	
+	var varChar = 'A'; // 문자
+	alert(varChar);
+	
+	var booleanType = true; // boolean
+	alert(booleanType);
+	
+	var string = "Hello World..."; // 문자열
+	alert(string);
+	
+	alert(2*pi*radius); // 원의 둘레
+	
+	// - 자바스크립트 자료형
+	var functionVar = function(){}; // 함수
+	var objectVar = {}; // 객체
+// */
+
+/* 5. 변수의 특징 
+	var cup = 'Coffee';
+	cup = 'Green Tea';
+	cup = 'Water';
+	alert('Drink '+cup+'...!!!');
+
+	var number = 10;
+	alert('숫자 값 : '+number);
+// */
+
+
+/* 6. 자료형 검사
+	var name = "홍길동";
+
+	// - 문자열
+	alert(typeof(name)); // string
+	
+	// - 숫자
+	alert(typeof(150));// number
+	alert(typeof(3.14));// number
+	
+	// - boolean
+	alert(typeof(true)); // boolean
+
+	// - 함수
+	alert(typeof(function(){})); // function
+	
+	// - 객체
+	alert(typeof({})); // object
+	
+	// - Undefined
+	alert(typeof(number)); // undefined
+// */
+
+
+/* 7. 입력 
+	var input = prompt('이름을 입력하세요.', '두 글자 이상 입력');
+	alert(input + '님 반갑습니다.');
+	
+	// - boolean 입력받을 때 사용하는 함수
+	var bool = confirm('수락하시겠습니까?');
+	if(bool) {
+		alert('수락하셨군요.');
+	} else {
+		alert('거절하셨군요.');
+	}
+// */
+	
+/* 8. 숫자와 문자열 자료형 변환 
+	// 1. + 연산자
+	alert(52 + 273);
+	alert('52' + '273');
+	alert('52' + 273);
+	alert(52 + '273');
+	
+	// 2. 덧셈을 제외한 사칙 연산
+	alert('52' * 2);
+	alert('52' - 2);
+	alert('52' / 2);
+	alert('52' % 2);
+	alert('홍길동' - 2);
+// */
+
+/*	
+	// 8.3. 강제 자료형 변환
+	//    - 다른 자료형 -> 숫자변환:Number() 함수 사용.
+	//    - 다른 자료형 -> 문자열 변환: String() 함수 사용.
+	//var input = prompt('숫자를 입력하세요.', '숫자');
+	//alert(typeof(input));
+	//var num = Number(input);
+	//alert(typeof(num));
+	//alert(typeof(input) + ' : ' + typeof(num));
+	var num = Number(prompt('숫자를 입력하세요.', '숫자'));
+	alert(typeof(num));
+	
+
+	// - 숫자가 아닌 값 입력시
+	//   . NaN(Not a Number) 출력
+	//   . 자바스크립트로 나타낼 수 없는 숫자 의미.
+// */
+
+/*
+	// 8.4. Boolean() 자료형 변환
+	alert(Boolean(0));
+	alert(Boolean(NaN));
+	alert(Boolean(''));
+	alert(Boolean(null));
+	alert(Boolean(undefined));
+	
+	// - 단, 주의사항
+	alert(Boolean('0'));
+	alert(Boolean('false'));
+	
+// */
+
+
+/* 9. undefined 자료형 
+	// 1. 존재하지 않는 것을 표현하는 자료형
+	alert(typeof(variable));
+	
+	// 2. 변수를 선언했지만, 초기화하지 않았을 때
+	var variable;
+	alert(typeof(variable));
+// */
+
+
+/* 10. 산술 연산자 : +, -, *, /, % 
+	alert(27 + 35);
+	alert(27 - 35);
+	alert(27 * 35);
+	alert(6 / 3);
+	alert(27 / 35); // 자바와 결과가 다름.
+	alert(27 % 35);
+// */
+	
+/* 11. 비교 연산자 : <, >, <=, >=, ==, != 
+	alert(25 < 35);
+// */
+	
+/* 12. 논리 연산자 : &&, ||, ! 
+	alert(52 > 135 && 45 < 78);
+// */
+
+/* 13. 복합 대입 연산자 : +=, -=, *=, /=, %= 
+	var value = 10;
+	value += 10;
+	alert(value);
+	
+	var value = 20; // 기존 변수를 삭제하고 새로 선언 - 오류 아님
+	value -= "world"; // 오류난 부분
+	alert(value); // NaN
+	
+// */
+
+/* 14. 증감 연산자 
+	var number = 10;
+	
+	alert(number++);
+	alert(++number);
+	alert(number--);
+	alert(--number);
+
+// */
+
+/* 15. 일치 연산자 
+	alert('' == false);
+	alert('' == 0);
+	alert(0 == false);
+	alert(273 == '273');
+	
+	// === : 양변의 자료형과 값이 일치.
+	// !== : 양변의 자료형과 값이 다름.
+	alert('' === false);
+	alert('' === 0);
+	alert(0 === false);
+	alert(273 === '273');
+	
+// */
+
+/* 16. 배열 
+	var array = [273, 'string', true, function(){}, {}, [150, 170]];
+	
+	alert(array[0]);
+	alert(array[1]);
+	alert(array[2]);
+	alert(array[3]);
+	alert(array[4]);
+	alert(array[5]);
+	
+	alert(array);
+
+// */
+
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>
