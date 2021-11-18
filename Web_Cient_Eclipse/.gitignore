@@ -1,0 +1,15 @@
+pom.properties
+
+
+##### #####
+# Eclipse #
+##### #####
+
+# confing eclipse
+.metadata/
+
+# config server
+Servers/
+
+# webapp/META-INF
+MANIFEST.MF
