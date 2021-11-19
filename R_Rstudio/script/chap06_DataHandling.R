@@ -166,7 +166,7 @@ wide
 View(wide)
 
 # 파일 저장 및 읽기
-setwd("C:/workspaces/Rwork/output")
+setwd("C:/DevSource/bigdata_workspaces/R_Rstudio/output")
 write.csv(wide, 'wide.csv', row.names = F)
 
 wide_read <- read.csv('wide.csv')
@@ -181,7 +181,7 @@ long <- melt(wide_read, id='id')
 long
 
 # 컬럼명 수정
-colnames(long) <- c("id", "Data", "Buy")
+colnames(long) <- c("id", "Date", "Buy")
 head(long)
 
 # reshape2 패키지의 smiths 데이터 셋 구조 변경하기
@@ -219,17 +219,3 @@ class(acast) # "array"
 
 # 월 단위 variable(대기관련 컬럼) 컬럼 합계
 acast(air_melt, month~variable, sum)
-
-
-
-
-
-
-
-
-
-
-
-
-
-

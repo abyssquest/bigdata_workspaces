@@ -1,4 +1,0 @@
-      Bugs.BR       Bugs.AR    NT.Bugs.BR    NT.Bugs.AR      Major.BR      Major.AR   Critical.BR   Critical.AR H.Priority.BR 
-        11605           374         10119            17          1135            35           432            10           459 
-H.Priority.AR 
-            3 
