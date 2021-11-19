@@ -166,7 +166,7 @@ wide
 View(wide)
 
 # 파일 저장 및 읽기
-setwd("C:/workspaces/Rwork/output")
+setwd("C:/DevSource/bigdata_workspaces/R_Rstudio/output")
 write.csv(wide, 'wide.csv', row.names = F)
 
 wide_read <- read.csv('wide.csv')
