@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XML 파일을 GET 방식으로 로드하기-$.get()</title>
+
+<style type="text/css">
+	th, td {
+		border: 1px solid gray;
+	}
+</style>
+
+<script src="./js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$.get('item.xml', function(data){
+			$('#treeData').append(
+					"<tr>"+
+					"	<th>id</th>"+
+					"	<th>name</th>"+
+					"	<th>price</th>"+
+					"	<th>description</th>"+
+					"</tr>");
+			
+			$(data).find('item').each(function(){
+				var $item = $(this);
+				
+				$('#treeData').append(
+					"<tr>"+
+			 			"<td align='center'>"+ $item.attr('id') +"</td>"+
+			 			"<td align='center'>"+ $item.attr('name') +"</td>"+
+			 			"<td align='right'>"+ $item.find('price').text() +"</td>"+
+			 			"<td align='left'>"+ $item.find('description').text() +"</td>"+
+			 		"</tr>");
+			});
+		});
+	});
+</script>
+
+</head>
+<body>
+
+	<table id="treeData"></table>
+
+</body>
+</html>

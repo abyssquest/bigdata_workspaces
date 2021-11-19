@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON 이용하기-$.getJSON()</title>
+
+<style type="text/css">
+	th, td {
+		border: 1px solid gray;
+	}
+</style>
+
+<script src="./js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$.getJSON('item.json', function(data){
+			$('#treeData').append(
+							"<tr>"+
+							"	<th>id</th>"+
+							"	<th>name</th>"+
+							"	<th>price</th>"+
+							"	<th>description</th>"+
+							"</tr>");
+			
+			$.each(data, function(){
+				$('#treeData').append(
+						 		"<tr>"+
+						 			"<td align='center'>"+ this.id +"</td>"+
+						 			"<td align='center'>"+ this.name +"</td>"+
+						 			"<td align='right'>"+ this.price +"</td>"+
+						 			"<td align='left'>"+ this.description +"</td>"+
+						 		"</tr>" );
+			});
+		});
+	});
+</script>
+
+</head>
+<body>
+
+	<table id="treeData"></table>
+
+</body>
+</html>
