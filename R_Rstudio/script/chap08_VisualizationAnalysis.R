@@ -253,7 +253,7 @@ summary(mpg)
 # (1) 한 개 변수 대상 qplot() 함수 적용
 help(qplot)
 
-qplot(data=mpg, x=hwy) # 세로 막대 그래프
+qplot(x=hwy, data=mpg) # 세로 막대 그래프
 
 # fill 속성: hwy 변수를 대상으로 drv 변수에 색 채우기(누적 막대 그래프)
 qplot(hwy, data=mpg, fill=drv) # fill 옵션 적용
@@ -373,15 +373,15 @@ p <- ggplot(diamonds, aes(carat,price,color=cut))
 p + geom_point()
 
 # 가장 최근 그래프 저장
-ggsave(file="C:/workspaces/Rwork/output/diamond_price.pdf")
-ggsave(file="C:/workspaces/Rwork/output/diamond_price.jpg", dpi=72)
+ggsave(file="C:/DevSource/bigdata_workspaces/R_Rstudio/output/diamond_price.pdf")
+ggsave(file="C:/DevSource/bigdata_workspaces/R_Rstudio/output/diamond_price.jpg", dpi=72)
 
 # 변수에 저장된 그래프 저장
 p <- ggplot(diamonds, aes(clarity)) # 선명도
 p <- p + geom_bar(aes(fill=cut), position="fill") # bar 추가
 p
 
-ggsave(file="C:/workspaces/Rwork/output/diamond_price.png",plot=p,width=10, height=5)
+ggsave(file="C:/DevSource/bigdata_workspaces/R_Rstudio/output/diamond_price.png",plot=p,width=10, height=5)
 
 
 # 4. 지도 공간 기법 시각화(ggmap package)
