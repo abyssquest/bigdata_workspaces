@@ -39,7 +39,7 @@ install.packages("DBI")
 install.packages("RJDBC")
 
 # 2) 패키지 로딩
-Sys.setenv(JAVA_HOME='C:/DevLang/OracleJDK17')
+Sys.setenv(JAVA_HOME='C:\\DevLang\\JDK17_MS')
 library(DBI)
 library(rJava)
 library(RJDBC) # rJava에 의존적이다(rJava 먼저 로딩).
@@ -49,7 +49,7 @@ library(RJDBC) # rJava에 의존적이다(rJava 먼저 로딩).
 ###  Oracle 11g Ex.
 # driver
 drv <- JDBC("oracle.jdbc.driver.OracleDriver",
-     "C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar")
+     "C:\\DevTool\\OracleDBxe\\app\\oracle\\product\\11.2.0\\server\\jdbc\\lib\\ojdbc6.jar")
 
 
 # db 연동(driver, url, id, pwd)
@@ -97,30 +97,59 @@ dbDisconnect(conn) #DBI
 # - 텍스트 마이닝(Text Mining): 문자로 된 데이터에서 가치 있는 정보를 얻어 내는 분석 기법.
 
 ## 2.1 토픽 분석
-#    - 텍스트 데이터를 대상을 단어를 추출하고, 이를 단어 사전과 비교하여 단어의 출현 빈도수를 분석하는 텍스트 마이닝 분석 과정을 의미.
+#    - 텍스트 데이터를 대상으로 단어를 추출하고, 이를 단어 사전과 비교하여 단어의 출현 빈도수를 분석하는 텍스트 마이닝 분석 과정을 의미.
 #    - 또한 단어구름(word cloud) 패키지를 적용하여 분석 결과를 시각화하는 과정도 포함.
 
 # (1) 패키지 설치 및 준비
+
+# SessionInfo 설치
+# install.packages('https://cran.rstudio.com/bin/windows/contrib/3.6/sessioninfo_1.1.1.zip', repos = NULL)
+
 #install.packages("KoNLP")
 # - package ‘KoNLP’ is not available (for R version 4.0.1)
-install.packages("https://cran.rstudio.com/bin/windows/contrib/3.4/KoNLP_0.80.1.zip",repos = NULL)
+# install.packages("https://cran.rstudio.com/bin/windows/contrib/3.4/KoNLP_0.80.1.zip",repos = NULL)
 
 # Sejong 설치: KoNLP와 의존성 있는 현재 버전의 한글 사전 Sejong 패키지 설치.
-install.packages("Sejong")
-install.packages(c("hash","tau","RSQLite","rJava","devtools"))
+# install.packages("Sejong")
+# install.packages(c("hash","tau","RSQLite","rJava"))
+# install.packages("https://cran.rstudio.com/bin/windows/contrib/3.6/devtools_2.4.1.zip",repos = NULL)
 
-library(Sejong); library(hash); library(tau); library(RSQLite)
+# library(Sejong)
+# library(hash)
+# library(tau)
+# library(RSQLite)
 
-Sys.setenv(JAVA_HOME='C:/Program Files/Java/jre1.8.0_271')
-library(rJava); library(devtools)
-
+#################################################
+# 직접 검색해서 KoNLP 설치 과정
+# 1. rtools 설치 (https://cran.r-project.org/bin/windows/Rtools/index.html)
+# 2. multilinguer 설치
+install.packages("multilinguer")
+library(multilinguer)
+# 3. java 설치
+install.packages("rJava")
+Sys.setenv(JAVA_HOME='C:\\DevLang\\JDK17_MS')
+library(rJava)
+# 4. 의존성 패키지 설치
+install.packages(c("hash", "tau", "Sejong", "RSQLite", "devtools", "bit", "rex", "lazyeval", "htmlwidgets", "crosstalk", "promises", "later", "sessioninfo", "xopen", "bit64", "blob", "DBI", "memoise", "plogr", "covr", "DT", "rcmdcheck", "rversions"), type = "binary")
+# 5. 깃허브 설치, KoNLP 설치
+install.packages("remotes")
+remotes::install_github('haven-jeon/KoNLP', upgrade = "never", INSTALL_opts=c("--no-multiarch"))
+# 6. KoNLP 설치 확인
 library(KoNLP)
+extractNoun('이 영화 정말 재미있다')
+
+#################################################
+# Sys.setenv(JAVA_HOME='C:\\DevLang\\JDK17_MS')
+# library(rJava)
+# library(devtools)
+
+# library(KoNLP)
 
 install.packages(c("wordcloud","tm"))
 library(wordcloud); library(tm)
 
 # (2) 텍스트 자료 가져오기
-facebook <- file("C:/workspaces/Rwork/data/facebook_bigdata.txt",encoding = "UTF-8")
+facebook <- file("D:\\DevWork\\workspaces_bigdata\\R_Rstudio\\data\\facebook_bigdata.txt",encoding = "UTF-8")
 facebook
 facebook_data <- readLines(facebook) # 줄 단위 데이터 생성
 head(facebook_data) # 앞부분 6줄 보기 - 줄 단위 데이터 생성
@@ -230,7 +259,7 @@ wordcloud(word.df$word, word.df$freq, scale = c(5,1),
 
 # 예시2) 텍스트 파일 가져오기와 단어 추출하기.
 # 데이터 불러오기
-txt <- readLines("C:/workspaces/Rwork/data/hiphop.txt")
+txt <- readLines("D:\\DevWork\\workspaces_bigdata\\R_Rstudio\\data\\hiphop.txt")
 head(txt)
 
 install.packages("stringr")
@@ -291,7 +320,7 @@ wordcloud(words = df_word$word,
 # - 토픽 분석 참조.
 
 # 1. 텍스트 파일 가져오기
-marketing <- file("C:/workspaces/Rwork/data/marketing.txt", encoding = "UTF-8")
+marketing <- file("D:\\DevWork\\workspaces_bigdata\\R_Rstudio\\data\\marketing.txt", encoding = "UTF-8")
 marketing
 marketing2 <- readLines(marketing) # 줄 단위 데이터 생성
 marketing2
