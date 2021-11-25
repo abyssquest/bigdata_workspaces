@@ -498,7 +498,7 @@ news_data
 
 
 # 실습: 수집한 자료를 파일로 저장하고 읽기
-setwd("C:/workspaces/Rwork/output")
+setwd("D:/DevWork/workspaces_bigdata/R_Rstudio/output")
 write.csv(news_data, "news_data.csv", quote = F)
 
 news_data <- read.csv("news_data.csv", header = T, stringsAsFactors = F)
