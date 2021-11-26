@@ -569,6 +569,3 @@ pal <- brewer.pal(12, "Paired")
 wordcloud(df$word, df$freq, min.freq = 2,
           random.order = F, scale = c(4, 0.7),
           rot.per = .1, colors = pal, family = "malgun")
-
-
-
