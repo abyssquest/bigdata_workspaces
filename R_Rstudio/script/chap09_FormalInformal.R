@@ -39,7 +39,7 @@ install.packages("DBI")
 install.packages("RJDBC")
 
 # 2) 패키지 로딩
-Sys.setenv(JAVA_HOME='C:\\DevLang\\JDK17_MS')
+Sys.setenv(JAVA_HOME='C:\\DevLang\\JDK17_Oracle')
 library(DBI)
 library(rJava)
 library(RJDBC) # rJava에 의존적이다(rJava 먼저 로딩).
