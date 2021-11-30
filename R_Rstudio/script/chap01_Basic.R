@@ -39,7 +39,7 @@ lines(density(Nile))
 
 # 히스토그램을 파일로 저장하기
 par(mfrow = c(1,1))
-pdf("C:/DevSource/bigdata_workspaces/R_Rstudio/output/batch.pdf") # pdf 출력
+pdf("D:/DevWork/workspaces_bigdata/R_Rstudio/output/batch.pdf") # pdf 출력
 hist(rnorm(20)) # 난수에 대한 히스토그램 그리기
 dev.off() # 출력할 파일 닫기
 
@@ -152,4 +152,4 @@ example(sum)
 
 # 작업 공간 지정
 getwd()
-setwd("C:/DevSource/bigdata_workspaces/R_Rstudio")
+setwd("D:/DevWork/workspaces_bigdata/R_Rstudio")

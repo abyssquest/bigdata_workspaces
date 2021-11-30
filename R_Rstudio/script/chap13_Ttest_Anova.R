@@ -65,7 +65,7 @@ high - X  # 0.0392 = 신뢰구간 상한값 - 표본 평균
 # -귀무가설(H0):기존 2020년도 고객불만율과 2021년도 CS교육 후 불만율에 차이가 없다.
 
 # 단계1. 실습데이터 가져오기
-data <- read.csv("C:/workspaces/Rwork/data/one_sample.csv", header = T)
+data <- read.csv("D:/DevWork/workspaces_bigdata/R_Rstudio/data/one_sample.csv", header = T)
 head(data)
 View(data)
 
@@ -110,7 +110,7 @@ binom.test(14, 150, p = 0.2, alternative = "less", conf.level = 0.95) # p-value 
 
 
 # 단계1. 실습 파일 가져오기
-data <- read.csv("C:/workspaces/Rwork/data/one_sample.csv", header = T)
+data <- read.csv("D:/DevWork/workspaces_bigdata/R_Rstudio/data/one_sample.csv", header = T)
 head(data)
 str(data)
 
@@ -172,7 +172,7 @@ t.test(x1, mu=5.2, alternative = "greater", conf.level = 0.95)
 # -귀무가설(H0):두가지 교육방법에 따라 교육생의 만족율에 차이가 없다.
 
 # 단계1. 실습데이터 가져오기
-data <- read.csv("C:/workspaces/Rwork/data/two_sample.csv", header = T)
+data <- read.csv("D:/DevWork/workspaces_bigdata/R_Rstudio/data/two_sample.csv", header = T)
 head(data)
 str(data)
 View(data)
@@ -215,7 +215,7 @@ prop.test(c(110,135), c(150,150), alternative = "less", conf.level = 0.95) # p-v
 # 귀무가설(H0):교육방법에 따른 두 집단 간 실기시험의 평균에 차이가 없다.
 
 # 단계1. 실습파일 가져오기
-data <- read.csv("C:/workspaces/Rwork/data/two_sample.csv", header = T)
+data <- read.csv("D:/DevWork/workspaces_bigdata/R_Rstudio/data/two_sample.csv", header = T)
 View(data)
 str(data)
 head(data)
